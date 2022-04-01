@@ -67,7 +67,7 @@ const handleDialogAction = () =>{
             
             <div className="pad">
                 { !data ?
-                    <div className='m-auto' style={{maxWidth:"800px"}}> <Loader /> </div> :
+                    <div className='m-auto'> <div><Loader /></div>  </div> :
                     <div className='m-auto' style={{maxWidth:"800px"}}>
                         <div className="d-flex justify-content-center align-items-center">
                             <div>

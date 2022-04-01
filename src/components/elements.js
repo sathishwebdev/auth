@@ -162,7 +162,7 @@ function Message({ message, type }) {
     );
   }
 
-  const Loader = () => <div className="loader"></div>
+  const Loader = () => <div className="App-header"> <div className="loader"></div> </div>
 
   export{
     Button,  
