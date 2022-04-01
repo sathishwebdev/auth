@@ -97,14 +97,14 @@ export const verifyUser = (id , key) => async (dispatch, getState) =>{
     });
 
    const {data} = await axios.get(`${BASE_URL}/verify/${id}/${key}`, getConfig(getState()));
-   let userData = localStorage.getItem("linkstore-user")
-   ? JSON.parse(localStorage.getItem("linkstore-user"))
+   let userData = localStorage.getItem("cred-details")
+   ? JSON.parse(localStorage.getItem("cred-details"))
    : null;
    if (!userData){
 
    }else if (data){
      userData.isVerified=true;
-     localStorage.setItem("linkstore-user", JSON.stringify(userData));
+     localStorage.setItem("cred-details", JSON.stringify(userData));
      dispatch({
       type: UserActionTypes.VERIFY.SUCCESS,
       payload: data

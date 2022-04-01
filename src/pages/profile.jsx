@@ -41,19 +41,25 @@ const handleDialogAction = () =>{
 }
 
       useEffect(() => {
-        if (!user_login) {
-          navigate(`/`);
-        }else if(!user_login.isVerified){
-            navigate(`/verify`);
-        }else{
-            dispatch(getUserDetails(user_login._id))
-        }
         if(delSuccess){
             setOpen(false);
             dispatch(logout());
             navigate("/")
         }
-      }, [delSuccess, dispatch, navigate, user_login]);
+        if (!user_login) {
+          navigate(`/`);
+        }else if(!user_login.isVerified){
+            navigate(`/verify`);
+        }else{
+            try{
+                dispatch(getUserDetails(user_login._id))
+            }catch(err){
+                console.log(err)
+            }
+          
+        }
+        
+      }, [delSuccess, navigate, user_login]);
     
     let user = !data? '' : data.data
 

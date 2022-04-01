@@ -17,11 +17,14 @@ function Verification() {
         if(user_login)
         {
          dispatch(verifyUser( id, key))
-    }
+        }
     else{
         navigate('/login')
     }
-    },[id, key, user_login])
+    if(success){
+        navigate('/')
+    }
+    },[id, key, user_login, success])
 
   return (
     <><div className="App" >
