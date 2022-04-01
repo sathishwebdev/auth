@@ -17,6 +17,7 @@ function Verification() {
         if(user_login)
         {
             if(response){
+
             }
             else{ 
                 dispatch(verifyUser( id, key))
@@ -34,6 +35,7 @@ function Verification() {
             <div>
                 {error && <Message type="error" message={error}/>}
                 {success && <Message type="success" message={response? response.message : "Account Verified"} />}
+                {response && <Message type="success" message={response? response.message : "Account Verified"} />}
                 
                 <h1>Verification</h1>
 
