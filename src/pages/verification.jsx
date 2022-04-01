@@ -38,12 +38,12 @@ function Verification() {
                 <h1>Verification</h1>
 
                 <>
-               <small>Please Logut and Login in again</small>
+               <small>If Already verified, Please Reload or Logut and Login in again</small>
                <br/>
                <SecondaryButton
                 onClick={()=>{
                     dispatch(logout())
-                    navigate('/user/login')
+                    navigate('/login')
                 }}
                >
                    Logout
