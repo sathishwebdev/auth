@@ -74,7 +74,7 @@ function EditComponent({ user }) {
         name: user.name,
         gender: user.gender,
         age: user.age,
-        dob: user.dob.split("-").reverse().join("-"),
+        dob: !user.dob ? new Date().toISOString().slice(0, 10) : user.dob.split("-").reverse().join("-"),
         mobile: user.mobile,
       },
       validationSchema: validator,

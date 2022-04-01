@@ -21,7 +21,7 @@ function Verification() {
     else{
         navigate('/login')
     }
-    },[dispatch, id, key, navigate, response, user_login])
+    },[id, key, user_login])
 
   return (
     <><div className="App" >
