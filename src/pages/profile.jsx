@@ -63,7 +63,7 @@ const handleDialogAction = () =>{
             {error && <Message type="error" message={error}/>}
             {success && <Message type="success" message="UserDetails"/>}
         </div>
-        <div style={{paddingTop:"80px", paddingBottom:"80px"}}>
+        <div className='m-auto' style={{paddingTop:"80px", paddingBottom:"80px"}}>
             
             <div className="pad">
                 { !data ?
