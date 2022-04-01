@@ -16,15 +16,10 @@ function Verification() {
     useEffect(()=>{
         if(user_login)
         {
-            if(response){
-
-            }
-            else{ 
-                dispatch(verifyUser( id, key))
-            }
+         dispatch(verifyUser( id, key))
     }
     else{
-        navigate('/user/login')
+        navigate('/login')
     }
     },[dispatch, id, key, navigate, response, user_login])
 
@@ -39,7 +34,7 @@ function Verification() {
                 
                 <h1>Verification</h1>
 
-               {response && !response.result && <>
+                <>
                <small>Please Logut and Login in again</small>
                <br/>
                <SecondaryButton
@@ -50,7 +45,7 @@ function Verification() {
                >
                    Logout
                </SecondaryButton>
-               </>}
+               </>
             </div>
             {loading && <div className="loader"></div>}
         </div>
